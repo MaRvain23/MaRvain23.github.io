@@ -191,32 +191,15 @@
 </section>
 <!-- Analizy umów i naruszeń -->
 <style>
-  /* Dopasowanie wysokości kolumny i PDF-a */
-  #analizy-umow .col-lg-6 {
-    min-height: 800px; /* Możesz zmienić na więcej/mniej wg potrzeb */
+  /* Tylko prawa kolumna (PDF) ma flex dla wycentrowania PDF w pionie */
+  #analizy-umow .col-lg-6.text-center {
     display: flex;
     align-items: center;
     justify-content: center;
+    min-height: 800px; /* wysokość tylko po stronie PDF */
   }
   #analizy-umow embed {
-    height: 700px !important; /* faktyczna wysokość okna PDF */
-    min-height: 700px !important;
-    width: 100%;
-    display: block;
-    border-radius: 0.5rem;
-    box-shadow: 0 0 15px rgba(0,0,0,0.15);
-  }
-</style>
-  
-<!-- Analizy umów i naruszeń -->
-<style>
-  /* Dopasowanie wysokości kolumny i PDF-a */
-  #analizy-umow .col-lg-6 {
-    min-height: 800px; /* Możesz zmienić na więcej/mniej wg potrzeb */
-  }
-  #analizy-umow embed {
-    height: 700px !important; /* faktyczna wysokość okna PDF */
-    min-height: 700px !important;
+    height: 700px;
     width: 100%;
     display: block;
     border-radius: 0.5rem;
@@ -224,7 +207,7 @@
   }
 </style>
 <section id="analizy-umow" class="container py-5">
-  <div class="row align-items-center">
+  <div class="row">
     <!-- Lewa strona: tekst -->
     <div class="col-lg-6">
       <h2 class="section-title">Analizy umów i naruszeń</h2>
@@ -318,6 +301,7 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" />
 </body>
 </html>
+
 
 
 
