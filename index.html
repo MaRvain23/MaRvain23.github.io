@@ -189,14 +189,13 @@
     </div>
   </div>
 </section>
+  
 <!-- Analizy umów i naruszeń -->
 <style>
-  /* Tylko prawa kolumna (PDF) ma flex dla wycentrowania PDF w pionie */
-  #analizy-umow .col-lg-6.text-center {
+  #analizy-umow .row {
+    min-height: 700px; /* wysokość minimum jak PDF */
     display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 800px; /* wysokość tylko po stronie PDF */
+    align-items: center; /* pionowe wyśrodkowanie obu kolumn */
   }
   #analizy-umow embed {
     height: 700px;
@@ -209,13 +208,15 @@
 <section id="analizy-umow" class="container py-5">
   <div class="row">
     <!-- Lewa strona: tekst -->
-    <div class="col-lg-6">
-      <h2 class="section-title">Analizy umów i naruszeń</h2>
-      <p>Oferujemy szczegółową analizę Twojej dokumentacji kredytowej i umów, aby zidentyfikować nieuczciwe zapisy oraz potencjalne naruszenia Twoich praw. Naszym celem jest zapewnienie Ci świadomości i wsparcia prawnego na każdym etapie.</p>
-      <p>Dzięki światowej klasy wiedzy i doświadczeniu pomagamy skutecznie przeciwdziałać niekorzystnym praktykom banków i instytucji finansowych.</p>
+    <div class="col-lg-6 d-flex flex-column justify-content-center">
+      <div>
+        <h2 class="section-title">Analizy umów i naruszeń</h2>
+        <p>Oferujemy szczegółową analizę Twojej dokumentacji kredytowej i umów, aby zidentyfikować nieuczciwe zapisy oraz potencjalne naruszenia Twoich praw. Naszym celem jest zapewnienie Ci świadomości i wsparcia prawnego na każdym etapie.</p>
+        <p>Dzięki światowej klasy wiedzy i doświadczeniu pomagamy skutecznie przeciwdziałać niekorzystnym praktykom banków i instytucji finansowych.</p>
+      </div>
     </div>
     <!-- Prawa strona: PDF -->
-    <div class="col-lg-6 text-center">
+    <div class="col-lg-6 text-center d-flex align-items-center">
       <embed src="W ochronie klientów Z TOKSYCZNĄ POŻYCZKĄ.pdf" type="application/pdf" />
     </div>
   </div>
@@ -301,6 +302,7 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" />
 </body>
 </html>
+
 
 
 
