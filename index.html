@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="pl">
 <head>
@@ -5,16 +6,26 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>MO-Pomoc - Pomoc Frankowiczom i Złotówkowiczom</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"/>
+  <!-- Import czcionki Montserrat z różnymi wagami -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <style>
+  /* Zastosowanie czcionki Montserrat i podstawowe ustawienia body */
+  body {
+    font-family: 'Montserrat', sans-serif;
+    padding-top: 56px; /* wysokość navbaru */
+  }
+  
+  /* Navbar */
   nav.navbar {
     position: fixed;
     top: 0;
     width: 100%;
     z-index: 1030;
   }
-  body {
-    padding-top: 56px; /* wysokość navbaru */
-  }
+  
+  /* Hero banner */
   .hero-bg {
     background: linear-gradient(to right, #204080cc, #59b9ffcc), url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?fit=crop&w=1400&q=80') center/cover no-repeat;
     color: white;
@@ -24,6 +35,8 @@
     justify-content: center;
     text-shadow: 0 3px 10px #222;
   }
+  
+  /* Przyciski */
   .hero-btn {
     background: #59b9ff;
     border: none;
@@ -34,14 +47,37 @@
     margin-top: 20px;
     transition: 0.2s;
   }
-  .hero-btn:hover { background: #204080; }
-  .benefit-icon { font-size: 2.5rem; color: #204080; }
-  .section-title { color: #204080; letter-spacing: 1px; }
-  footer { background: #204080; color: #fff; padding: 20px 0; }
-  .nav-link.active, .nav-link:focus, .nav-link:hover { color: #59b9ff !important; }
+  .hero-btn:hover { 
+    background: #204080; 
+  }
+  
+  /* Ikony i style */
+  .benefit-icon { 
+    font-size: 2.5rem; 
+    color: #204080; 
+  }
+  .section-title { 
+    color: #204080; 
+    letter-spacing: 1px; 
+  }
+  
+  /* Footer */
+  footer { 
+    background: #204080; 
+    color: #fff; 
+    padding: 20px 0; 
+  }
+  
+  /* Nawigacja - aktywne linki */
+  .nav-link.active, 
+  .nav-link:focus, 
+  .nav-link:hover { 
+    color: #59b9ff !important; 
+  }
   </style>
 </head>
 <body>
+
 <!-- NAWIGACJA -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary mb-0">
   <div class="container">
@@ -166,7 +202,9 @@
 <!-- SPECJALIZACJE -->
 <section id="specjalizacje" class="container py-5">
   <h2 class="section-title text-center">Nasze specjalizacje</h2>
-  <div class="row g-4 justify-content-center">
+  
+  <!-- Pierwszy rząd - 3 specjalizacje -->
+  <div class="row g-4 justify-content-center mb-4">
     <div class="col-md-4">
       <div class="bg-light border rounded-3 p-4 h-100 shadow-sm">
         <div class="card-icon mb-2"><i class="bi bi-currency-exchange"></i></div>
@@ -178,19 +216,45 @@
       <div class="bg-light border rounded-3 p-4 h-100 shadow-sm">
         <div class="card-icon mb-2"><i class="bi bi-shield-check"></i></div>
         <h5>Kredyty złotówkowe</h5>
-        <p>Skuteczne prowadzenie spraw kredytobiorców „złotówkowiczów”, także konsolidacyjnych i gotówkowych.</p>
+        <p>Skuteczne prowadzenie spraw kredytobiorców „złotówkowiczów", także konsolidacyjnych i gotówkowych.</p>
       </div>
     </div>
     <div class="col-md-4">
       <div class="bg-light border rounded-3 p-4 h-100 shadow-sm">
-        <div class="card-icon mb-2"><i class="bi bi-file-earmark-text"></i></div>
-        <h5>Analiza umów</h5>
-        <p>Dokładna analiza dokumentacji kredytowej – znajdujemy nieuczciwe zapisy i wspieramy prawnie.</p>
+        <div class="card-icon mb-2"><i class="bi bi-hammer"></i></div>
+        <h5>Szkody górnicze</h5>
+        <p>Dochodzenie odszkodowań za szkody spowodowane eksploatacją górniczą - uszkodzenia budynków i nieruchomości.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Drugi rząd - 3 nowe specjalizacje -->
+  <div class="row g-4 justify-content-center">
+    <div class="col-md-4">
+      <div class="bg-light border rounded-3 p-4 h-100 shadow-sm">
+        <div class="card-icon mb-2"><i class="bi bi-person-x"></i></div>
+        <h5>Upadłość konsumencka</h5>
+        <p>Kompleksowa pomoc w procedurze upadłości konsumenckiej – od wniosku po zakończenie postępowania.</p>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="bg-light border rounded-3 p-4 h-100 shadow-sm">
+        <div class="card-icon mb-2"><i class="bi bi-piggy-bank"></i></div>
+        <h5>Dofinansowania</h5>
+        <p>Wsparcie w uzyskiwaniu dofinansowań i dotacji unijnych oraz krajowych dla firm i osób prywatnych.</p>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="bg-light border rounded-3 p-4 h-100 shadow-sm">
+        <div class="card-icon mb-2"><i class="bi bi-briefcase"></i></div>
+        <h5>Spory konsumenckie</h5>
+        <p>Reprezentacja w sporach konsumenckich z przedsiębiorcami oraz ochrona praw konsumentów.</p>
       </div>
     </div>
   </div>
 </section>
-  
+
+
 <!-- Analizy umów i naruszeń -->
 <style>
   #analizy-umow .row {
@@ -342,20 +406,3 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" />
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
